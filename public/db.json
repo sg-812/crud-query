@@ -1,0 +1,34 @@
+{
+  "user": [
+    {
+      "id": "ab21",
+      "username": "John Doe",
+      "email": "john.doe@gmail.com"
+    },
+    {
+      "id": "57c5",
+      "username": "Harry Potter",
+      "email": "harry@gmail.com"
+    },
+    {
+      "id": "b165",
+      "username": "Luis Brown",
+      "email": "luis@gmail.com"
+    },
+    {
+      "id": "f0a7",
+      "username": "Draco Malfoy",
+      "email": "drac@outlook.com"
+    },
+    {
+      "id": "5fcc",
+      "username": "Daisy Paul",
+      "email": "daisy.0592@gmail.com"
+    },
+    {
+      "id": "e603",
+      "username": "Soumi",
+      "email": "soumi@gmail.com"
+    }
+  ]
+}
