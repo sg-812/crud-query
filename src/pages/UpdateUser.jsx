@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { editUser, fetchSingleUser } from "../queryFunctions/crudFunctions";
 import CommonForm from "../components/commonform";
 import { Box, Container } from "@mui/material";
+import Swal from 'sweetalert2';
 
 const UpdateUser = () => {
   let { id } = useParams();
@@ -13,7 +14,7 @@ const UpdateUser = () => {
 
   const { mutate } = useMutation(editUser, {
     onSuccess: () => {
-      alert("User updated successfully");
+      Swal.fire("User updated successfully");
       navigate("/view");
     },
     onError: (error) => {

@@ -120,7 +120,7 @@ const Header = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link to={page.page_path}>
+              <Link to={page.page_path} key={page.id}>
                 <Button
                   key={page.id}
                   onClick={handleCloseNavMenu}

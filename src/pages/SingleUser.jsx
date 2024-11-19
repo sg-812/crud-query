@@ -3,6 +3,7 @@ import { useMutation, useQuery } from "react-query";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { deleteUser, fetchSingleUser } from "../queryFunctions/crudFunctions";
 import { Box, Container, Button, Stack } from "@mui/material";
+import Swal from 'sweetalert2';
 
 const SingleUser = () => {
   let { id } = useParams();
@@ -11,13 +12,13 @@ const SingleUser = () => {
     queryKey: ["user", id],
     queryFn: () => fetchSingleUser(id),
   });
-  console.log("fetch single User", fetchResult);
+  // console.log("fetch single User", fetchResult);
 
   let { isLoading, isFetching, error, isError, data: user } = fetchResult;
 
   const { mutate } = useMutation(deleteUser, {
     onSuccess: () => {
-      alert("User deleted successfully");
+      Swal.fire("User deleted successfully");
       navigate("/view");
     },
     onError: (error) => {
